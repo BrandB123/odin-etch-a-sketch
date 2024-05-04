@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+}
+
+
+.grid-container {
+    display: flex;
+    flex: 1 1 auto;
+    /*border: 1px solid black;*/
+    flex-direction: column;
+    justify-content: center;
+    height: 500px;
+    max-width: 500px;
+    background-color: white;
+}
+
+
+.div-row {
+    display: flex;
+    flex: 1 1 auto;
+    /*border: 1px solid blue; */
+}
+
+
+.div-column {
+    display: flex;
+    flex: 1 1 auto;
+    /*border: 1px solid red;*/
+}
