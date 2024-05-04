@@ -27,3 +27,9 @@ function createGrid(width, height){
 // create default grid
 createGrid(gridWidth, gridHeight);
 
+
+container.addEventListener("mouseover", (event) => {
+    /*let target = event.target.id;*/
+    let target = event.target;
+    target.style.cssText = "background-color: black;";
+});
