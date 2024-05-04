@@ -3,7 +3,11 @@ let gridWidth = 16;
 let gridHeight = 16;
 
 let container = document.querySelector(".grid-container");
-let btn = document.querySelector("button");
+let gridBtn = document.querySelector(".grid-btn");
+let blackWhiteBtn = document.querySelector(".black-and-white-btn");
+let colorBtn = document.querySelector(".color-btn");
+let blackAndWhite = true;
+let color = false;
 
 
 function createGrid(width, height){
@@ -55,13 +59,25 @@ function advancedDrawing(target) {
 
 container.addEventListener("mouseover", (event) => {
     let target = event.target;
-    //basicDrawing(target);
-    advancedDrawing(target);
+    if (color) {
+        advancedDrawing(target);
+    } else {
+        basicDrawing(target);
+    }
 });
 
 
-//let btn = document.querySelector("button");
-btn.addEventListener("click", () => {
+blackWhiteBtn.addEventListener("click", () => {
+    color = false;
+});
+
+
+colorBtn.addEventListener("click", () => {
+    color = true;
+});
+
+
+gridBtn.addEventListener("click", () => {
     do {
         alert("Width and height must be greater then 10 and less than 100.")
         gridWidth = prompt("Grid Width: ");
