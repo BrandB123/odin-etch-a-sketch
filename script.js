@@ -7,7 +7,7 @@ let container = document.querySelector(".grid-container");
 function createGrid(width, height){
     //clear div-container
     while (container.firstChild) {
-        container.remove(container.firstChild);
+        container.removeChild(container.firstChild);
     }
     //fill div-container
     for (let i = 0; i < height; i++) {
@@ -33,3 +33,17 @@ container.addEventListener("mouseover", (event) => {
     let target = event.target;
     target.style.cssText = "background-color: black;";
 });
+
+
+let btn = document.querySelector("button");
+btn.addEventListener("click", () => {
+    do {
+        alert("Width and height must be greater then 10 and less than 100.")
+        gridWidth = prompt("Grid Width: ");
+        gridHeight = prompt("Grid Height: ");
+    }
+    while (gridWidth < 10 || gridWidth > 100 || gridHeight < 10 || gridHeight > 100);
+    
+    createGrid(gridWidth, gridHeight);
+});
+
