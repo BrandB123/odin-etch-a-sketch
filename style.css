@@ -1,8 +1,18 @@
 body {
     display: flex;
+    flex-direction: column; /*just added*/
     justify-content: center;
     align-items: center;
     background-color: lightgray;
+}
+
+
+.btn {
+    display: flex;
+    flex: auto;
+    width: 100%;
+    justify-content: flex-end;
+    padding-right: 10%;
 }
 
 
@@ -13,6 +23,7 @@ body {
     flex-direction: column;
     justify-content: center;
     height: 500px;
+    min-width: 500px;
     max-width: 500px;
     background-color: white;
 }
